@@ -1,0 +1,28 @@
+@'
+# Environment files
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+# Private keys and certificates
+**/keys/
+**/*.pem
+**/*.key
+**/*.p12
+**/*.pfx
+
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build output
+dist/
+**/dist/
+
+# Logs
+*.log
+npm-debug.log*
+'@ | Set-Content -Path .gitignore
