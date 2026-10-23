@@ -3,7 +3,8 @@ const { MongoClient } = require("mongodb");
 let db;
 
 async function connectDB() {
-  const client = new MongoClient(process.env.MONGODB_URI);
+  const client = new MongoClient(process.env.MONGODB_URI, {
+  family: 4,});
   await client.connect();
   db = client.db(process.env.DB_NAME || "pwanigrid");
 
